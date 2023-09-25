@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-waste-Quick-Fix</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+  
+  
+  <div class="container">
+    <header>
+        <div class="navbar">
+          <div style="display: flex;">
+            <div class="logo"><img src="{{ url_for('static', filename='image/nav-logo.png') }}" alt="logo"></div>
+          </div>
+          <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Events.html">Contact Us</a></li>
+            <li><img src="{{ url_for('static', filename='image/message.webp') }}" alt="Message" onclick="openPopup()" style="cursor: pointer;height: 25px;width:25px;margin: 3px;"></li>
+          </ul>
+          
+          
+
+            <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+            </div>
+    
+        <div class="dropdown_menu">
+          
+            <li> <a href="index.html">Home</a> </li>
+            <li><a href="Events.html">Contact Us</a></li>
+          
+         </div>
+
+    </div>
+    </header>
+
+    <div class="popup-container" id="popup">
+      <div class="popup-content">
+          <div class="popup-header">
+              <h2>The Importance of E-Waste Management</h2>
+          </div>
+          <div class="popup-body">
+              <p>E-waste contains toxic materials like lead, mercury, and cadmium, which can leach into the environment, causing pollution and health risks.</p>
+              <p>Additionally, improper disposal of e-waste in landfills contributes to electronic waste pollution, harming ecosystems.</p>
+          </div>
+          <div class="popup-advantages">
+              <h2>Advantages of E-Waste Management:</h2>
+              <p>1. Environmental Protection: Proper e-waste management reduces the release of harmful chemicals and reduces pollution, protecting the environment.</p>
+              <p>2. Resource Recovery: Recycling e-waste allows for the recovery of valuable resources like metals and plastics, reducing the need for mining and conserving natural resources.</p>
+              <p>3. Health Benefits: Effective e-waste management safeguards human health by minimizing exposure to hazardous materials.</p>
+              <p>4. Legal Compliance: Many countries have regulations in place that require responsible e-waste disposal, and compliance can prevent legal issues.</p>
+          </div>
+          <div class="popup-footer">
+              <button onclick="closePopup()">Got It</button>
+          </div>
+      </div>
+  </div>
+
+    <div id="content">
+        <div class="header__container">
+            <div class="mainbody">
+    
+                <div class="mainrow">
+    
+                    <div class="maincol">
+                    <div class="text">
+                     <h1 >E-Waste </h1>
+                    </div>
+                     <h1>Quick Fix</h1>
+                           
+                      <p>E-Waste Quick Fix is your comprehensive resource for sustainable e-waste management. Explore the art of eco-friendly electronics disposal, uncover the hidden treasures of precious metals recovery, and pinpoint the nearest e-waste centers in your area. Delve into the intricate process of e-waste recycling, all at the touch of a button. Join us in safeguarding our planet through responsible e-waste practices
+                      </p>
+                      <div class="btn">
+                      <button class="pushable" onclick="searchPlaces()">
+                        <span class="front">
+                          Centers
+                        </span>
+                      </button>
+                      <button class="pushable">
+                        <span class="front">
+                          Process
+                        </span>
+                      </button>
+                    </div>
+                    </div>
+                 
+                 
+                    <div class="maincol">
+                        <img src="{{ url_for('static', filename='image/logo (1).png') }}" alt="mainimage" />
+                    </div>
+                    
+                </div>
+    
+              </div>
+        </div>   
+    </div>   
+</div>
+
+<script src="{{ url_for('static', filename='index.js') }}"></script>
+
+<script>
+  function searchPlaces() {
+    const searchQuery = 'ewaste manage'
+
+    const googleMapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(searchQuery)}`;
+    window.location.href = googleMapsUrl;
+}
+</script>
+
+</body>
+</html>

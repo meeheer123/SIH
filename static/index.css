@@ -1,0 +1,430 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;  
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background-color: #8ae9b3;
+  background-image: linear-gradient(315deg, #8ae9b3 0%, #c8d6e5 74%);
+}
+.container{
+  position: relative;
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8ae9b3;
+  background-image: linear-gradient(315deg, #8ae9b3 0%, #c8d6e5 74%);
+  height: 100vh;
+}
+
+    .navbar li{
+      list-style: none;
+    
+    }
+    
+    
+    .navbar a{
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+    }
+    
+    
+    .navbar a:hover{
+      color: greenyellow;
+    }
+    
+   header{
+      position: absolute;
+      top: 2px;
+      padding: 0 1.8rem;
+       width: 100%;
+      margin-top: 10px;
+      background: #228B22;
+      backdrop-filter: blur(4px);
+    } 
+  
+  
+    
+    .navbar{
+      width: 100%;
+      height: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+     
+    }
+    
+    
+    .navbar .logo img{
+      height: 2.5rem;
+      width: 2.5rem; 
+    }
+ 
+    .navbar .links{
+      display: flex;
+      gap: 2rem;
+    }
+    
+    
+    .navbar .toggle_btn{
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: none;
+    }
+    
+    
+    /* 
+    dropdownmenu */
+    .dropdown_menu{
+      position: absolute;
+      right: 2rem;
+      top: 60px;
+      width: 300px;
+      height: 0;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(15px);
+      border-radius:10px;
+      overflow: hidden;
+      display: none;
+      transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      
+      
+    }
+    
+    .dropdown_menu.open{
+      height: 240px;
+      padding: auto;
+      margin: auto;
+    }
+    
+    
+    
+    
+    
+    
+    .dropdown_menu li{
+      padding: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    
+    }
+
+/* Common styles for the popup */
+/* Common styles for the popup */
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background color */
+  border: 3px solid green;
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  max-height: 600px;
+  overflow-y: auto;
+  z-index: 9999;
+  color: brown;
+  backdrop-filter: blur(14px); /* Apply a blur filter */
+}
+
+
+.popup-content {
+  text-align: left; /* Left-align text */
+}
+
+.popup-header {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #96384f;
+}
+
+.popup-advantages h2 {
+  color: #96384f;
+}
+
+.popup-body {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  max-height: 280px; /* Maximum height with scrolling */
+  overflow-y: auto; /* Enable vertical scrolling for excess content */
+}
+
+.popup-footer {
+  text-align: center;
+}
+
+.popup-footer button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .popup-container {
+      top: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      border-radius: 0;
+      border: none;
+      max-height: none;
+      height: 100%;
+  }
+
+  .popup-content {
+      padding: 10px;
+  }
+
+  .popup-body {
+      max-height: none;
+      overflow-y: auto;
+  }
+}
+
+    
+    /* responsive */
+    @media(max-width:992px)
+    {
+      .navbar .links{
+          display: none;
+      }
+    
+      .navbar .toggle_btn{
+          display: block;
+      }
+    
+      .dropdown_menu{
+          display: block;
+      }
+    
+      .event2{
+        display: none;
+      }
+      
+      
+    }
+    
+    @media(max-width:576px){
+      .dropdown_menu{
+          left: 2rem;
+          width: unset;
+      }
+      .container{
+        height: auto;
+      }
+    
+     
+    
+    }
+    
+      /* navbar css ends here */
+      /* css for th main body */
+
+      .mainbody{
+        width: 100%;
+        position: relative;
+        bottom: 0;
+        background: transparent;
+        color:#000;
+        padding: 100px  0 30px;
+        font-size: 13px;
+        line-height: 20px;
+      }
+      
+      .mainrow{
+        width: 85%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+      
+      .maincol{
+        flex-basis: 25%;
+        padding: 10px;
+      }
+   
+      .maincol:nth-child(1){
+        flex-basis: 45%;
+      }
+      .maincol p{
+        font-size: 1rem;
+        gap: 2px;
+      }
+      .maincol .text h1{
+        color: rgb(111, 111, 111);
+      }
+      .maincol h1{
+        font-size: 4rem;
+        margin-bottom: 20px;
+        line-height: 3.5rem;
+        color: green;
+      }
+      
+      .maincol img{
+        width: 20rem;
+        height:auto ;
+        margin-bottom: 20px;
+      }
+      
+      .maincol h3{
+        margin-bottom: 40px;
+        margin-top: 20px;
+        font-size: xx-large;
+        line-height: 30px;
+      }
+    
+      /*________________________________________________<media query for the mobiles___________________________ */
+      @media(max-width:700px){
+      
+        .mainbody{
+          bottom: unset;
+        }
+        
+        .mainrow{
+          flex-direction: column-reverse;
+        }
+        
+        .maincol{
+          flex-basis: 100%;
+        
+        }
+        
+        .maincol:nth-child(3),.maincol:nth-child(2){
+          flex-basis: 100%;
+        }
+        
+        }
+        
+
+        /* ________________________code for the button_____________________________ */
+
+  .btn{
+    margin-top: 40px;
+    display: flex;
+   
+  }
+  .pushable {
+    background:	#013220;
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    margin: 2px;
+  }
+  .front {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1rem;
+    background:#2A7E19;
+    color: white;
+    transform: translateY(-6px);
+  }
+
+  .pushable:active .front {
+    transform: translateY(-2px);
+  }
+
+/* _______________________css for the popup_____________________________________________ */
+
+/* Common styles for the popup */
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  background-color: #fff; /* Semi-transparent background */
+  border: 3px solid green; /* Border added */
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%; /* Full width on smaller screens */
+  max-width: 700px; /* Maximum width */
+  height: auto; /* Automatically adjust height */
+  max-height: 600px; /* Maximum height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  z-index: 9999;
+  color: brown;
+}
+
+.popup-content {
+  text-align: left; /* Left-align text */
+}
+
+.popup-header {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: grey;
+}
+
+.popup-advantages h2 {
+  color: grey;
+}
+
+.popup-body {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  max-height: 280px; /* Maximum height with scrolling */
+  overflow-y: auto; /* Enable vertical scrolling for excess content */
+}
+
+.popup-footer {
+  text-align: center;
+}
+
+.popup-footer button {
+  background-color: green;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .popup-container {
+    position: fixed;
+    top: 180px;
+    right: 40px;
+      width: 80%;
+      border-radius: 20px;
+      border: 3px solid green;
+      height: 80vh;
+  }
+
+  .popup-content {
+      padding: 10px;
+  }
+
+  .popup-body {
+      max-height: none;
+      overflow-y: auto;
+  }
+}
+
+
+
+
